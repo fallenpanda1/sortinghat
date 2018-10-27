@@ -74,6 +74,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomActionLabel" destination="9ET-oC-3sk" id="PLZ-AZ-2GP"/>
+                        <outlet property="centralActionLabel" destination="Mll-cL-Z7E" id="S3G-2z-c12"/>
+                        <outlet property="leftActionLabel" destination="H0S-YG-s6h" id="eBY-oM-66e"/>
+                        <outlet property="rightActionLabel" destination="npN-ts-8rC" id="nN4-8m-Vxc"/>
+                        <outlet property="topActionLabel" destination="1ph-Bl-DrM" id="m8b-JS-BE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
