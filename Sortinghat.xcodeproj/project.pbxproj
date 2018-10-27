@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86C1EA7131AD67E40F346981 /* Pods_Sortinghat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B645D5519C4F63EBC9AFE0D /* Pods_Sortinghat.framework */; };
 		E9348E9E2184F791008FCFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9348E9D2184F791008FCFE4 /* AppDelegate.swift */; };
 		E9348EA02184F791008FCFE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9348E9F2184F791008FCFE4 /* ViewController.swift */; };
 		E9348EA32184F791008FCFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9348EA12184F791008FCFE4 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23A288BE6EBB2569CE7A3C43 /* Pods-Sortinghat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sortinghat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sortinghat/Pods-Sortinghat.release.xcconfig"; sourceTree = "<group>"; };
+		9B645D5519C4F63EBC9AFE0D /* Pods_Sortinghat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sortinghat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D59FAECEF12B808C8DBBE0CF /* Pods-Sortinghat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sortinghat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sortinghat/Pods-Sortinghat.debug.xcconfig"; sourceTree = "<group>"; };
 		E9348E9A2184F791008FCFE4 /* Sortinghat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sortinghat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9348E9D2184F791008FCFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9348E9F2184F791008FCFE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86C1EA7131AD67E40F346981 /* Pods_Sortinghat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		710DC10269EE3F5D67FAEB2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B645D5519C4F63EBC9AFE0D /* Pods_Sortinghat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D9F883B2FFC4FD33E6D0321 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D59FAECEF12B808C8DBBE0CF /* Pods-Sortinghat.debug.xcconfig */,
+				23A288BE6EBB2569CE7A3C43 /* Pods-Sortinghat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E9348E912184F791008FCFE4 = {
 			isa = PBXGroup;
 			children = (
 				E9348E9C2184F791008FCFE4 /* Sortinghat */,
 				E9348E9B2184F791008FCFE4 /* Products */,
+				7D9F883B2FFC4FD33E6D0321 /* Pods */,
+				710DC10269EE3F5D67FAEB2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9348EAC2184F794008FCFE4 /* Build configuration list for PBXNativeTarget "Sortinghat" */;
 			buildPhases = (
+				A4F2F2F04C2C2DC619A3E904 /* [CP] Check Pods Manifest.lock */,
 				E9348E962184F791008FCFE4 /* Sources */,
 				E9348E972184F791008FCFE4 /* Frameworks */,
 				E9348E982184F791008FCFE4 /* Resources */,
+				72C5589E4E842BCA731094DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72C5589E4E842BCA731094DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sortinghat/Pods-Sortinghat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sortinghat/Pods-Sortinghat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F2F2F04C2C2DC619A3E904 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sortinghat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9348E962184F791008FCFE4 /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		E9348EAD2184F794008FCFE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D59FAECEF12B808C8DBBE0CF /* Pods-Sortinghat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		E9348EAE2184F794008FCFE4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23A288BE6EBB2569CE7A3C43 /* Pods-Sortinghat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
