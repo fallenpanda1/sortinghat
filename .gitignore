@@ -1,0 +1,11 @@
+## Xcode User settings
+xcuserdata/
+
+# CocoaPods
+/Pods
+
+# Mac stuff
+.DS_Store
+
+# build folder
+/build
