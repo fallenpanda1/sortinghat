@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,39 +14,39 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SwipeMenuViewController" customModule="Sortinghat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-GK-1L7" userLabel="Action Circle">
-                                <rect key="frame" x="262" y="493" width="500" height="400"/>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-GK-1L7" userLabel="Action Circle">
+                                <rect key="frame" x="0.0" y="193.5" width="375" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Central Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-cL-Z7E">
-                                        <rect key="frame" x="195" y="189" width="109" height="21"/>
+                                        <rect key="frame" x="133" y="139" width="109" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-Bl-DrM">
-                                        <rect key="frame" x="209.5" y="6" width="81.5" height="20.5"/>
+                                        <rect key="frame" x="147" y="6" width="81.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ET-oC-3sk">
-                                        <rect key="frame" x="195.5" y="372.5" width="109" height="20.5"/>
+                                        <rect key="frame" x="133" y="272.5" width="109" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npN-ts-8rC" userLabel="Right Action">
-                                        <rect key="frame" x="392" y="190" width="93" height="20.5"/>
+                                        <rect key="frame" x="267" y="140" width="93" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0S-YG-s6h">
-                                        <rect key="frame" x="15" y="190" width="83" height="20.5"/>
+                                        <rect key="frame" x="15" y="140" width="83" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -67,12 +67,19 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7fQ-GK-1L7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7ZH-er-Ra4"/>
                             <constraint firstItem="7fQ-GK-1L7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="999" id="An4-UV-GNb"/>
                             <constraint firstItem="7fQ-GK-1L7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tYh-is-oqh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="psL-eh-8aN" appends="YES" id="WbT-Gk-Ml9"/>
+                            <outletCollection property="gestureRecognizers" destination="MWO-3e-Y2G" appends="YES" id="Ygh-yW-aku"/>
+                            <outletCollection property="gestureRecognizers" destination="Qbo-2O-ZgA" appends="YES" id="dW1-U5-6h5"/>
+                            <outletCollection property="gestureRecognizers" destination="puK-qg-coc" appends="YES" id="oOg-Nu-fzz"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="bottomActionLabel" destination="9ET-oC-3sk" id="PLZ-AZ-2GP"/>
@@ -83,6 +90,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="psL-eh-8aN" userLabel="Swipe Up Gesture">
+                    <connections>
+                        <action selector="didSwipeUp:" destination="BYZ-38-t0r" id="AmK-CZ-0XN"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="MWO-3e-Y2G" userLabel="Swipe Left Gesture">
+                    <connections>
+                        <action selector="didSwipeLeft:" destination="BYZ-38-t0r" id="VNm-MQ-V3i"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Qbo-2O-ZgA" userLabel="Swipe Right Gesture">
+                    <connections>
+                        <action selector="didSwipeRight:" destination="BYZ-38-t0r" id="7kk-BS-m1c"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="puK-qg-coc" userLabel="Swipe Down Gesture">
+                    <connections>
+                        <action selector="didSwipeDown:" destination="BYZ-38-t0r" id="Bus-NG-j4x"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.69565217391306"/>
         </scene>

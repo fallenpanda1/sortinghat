@@ -27,4 +27,20 @@ class SwipeMenuViewController: UIViewController {
     private func setUpBindings() {
         // TODO: implement me
     }
+
+    @IBAction func didSwipeUp(_ sender: Any) {
+        print("up")
+    }
+
+    @IBAction func didSwipeLeft(_ sender: Any) {
+        print("left")
+    }
+
+    @IBAction func didSwipeDown(_ sender: Any) {
+        print("down")
+    }
+
+    @IBAction func didSwipeRight(_ sender: Any) {
+        print("right")
+    }
 }
