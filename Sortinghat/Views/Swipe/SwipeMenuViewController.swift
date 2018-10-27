@@ -43,4 +43,8 @@ class SwipeMenuViewController: UIViewController {
     @IBAction func didSwipeRight(_ sender: Any) {
         print("right")
     }
+
+    @IBAction func didTap(_ sender: Any) {
+        print("tap")
+    }
 }
