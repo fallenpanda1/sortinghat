@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		86C1EA7131AD67E40F346981 /* Pods_Sortinghat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B645D5519C4F63EBC9AFE0D /* Pods_Sortinghat.framework */; };
 		E9348E9E2184F791008FCFE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9348E9D2184F791008FCFE4 /* AppDelegate.swift */; };
-		E9348EA02184F791008FCFE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9348E9F2184F791008FCFE4 /* ViewController.swift */; };
+		E9348EA02184F791008FCFE4 /* SwipeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9348E9F2184F791008FCFE4 /* SwipeMenuViewController.swift */; };
 		E9348EA32184F791008FCFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9348EA12184F791008FCFE4 /* Main.storyboard */; };
 		E9348EA52184F794008FCFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9348EA42184F794008FCFE4 /* Assets.xcassets */; };
 		E9348EA82184F794008FCFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9348EA62184F794008FCFE4 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		D59FAECEF12B808C8DBBE0CF /* Pods-Sortinghat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sortinghat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sortinghat/Pods-Sortinghat.debug.xcconfig"; sourceTree = "<group>"; };
 		E9348E9A2184F791008FCFE4 /* Sortinghat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sortinghat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9348E9D2184F791008FCFE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9348E9F2184F791008FCFE4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9348E9F2184F791008FCFE4 /* SwipeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeMenuViewController.swift; sourceTree = "<group>"; };
 		E9348EA22184F791008FCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9348EA42184F794008FCFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9348EA72184F794008FCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E9348E9D2184F791008FCFE4 /* AppDelegate.swift */,
-				E9348E9F2184F791008FCFE4 /* ViewController.swift */,
+				E9348E9F2184F791008FCFE4 /* SwipeMenuViewController.swift */,
 				E9348EA12184F791008FCFE4 /* Main.storyboard */,
 				E9348EA42184F794008FCFE4 /* Assets.xcassets */,
 				E9348EA62184F794008FCFE4 /* LaunchScreen.storyboard */,
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9348EA02184F791008FCFE4 /* ViewController.swift in Sources */,
+				E9348EA02184F791008FCFE4 /* SwipeMenuViewController.swift in Sources */,
 				E9348E9E2184F791008FCFE4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
