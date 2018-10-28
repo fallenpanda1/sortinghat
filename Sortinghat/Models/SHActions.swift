@@ -1,3 +1,5 @@
+import RxSwift
+
 enum House: String {
     case gryffindor
     case hufflepuff
@@ -13,18 +15,53 @@ enum House: String {
 struct DeclareHouseAction: Action {
     let house: House
 
-    func execute() {
-        print("House \(house.name)!")
+    func execute() -> Completable {
+        let house = self.house
+        return Completable.create { completable in
+            let audio: SHAudio
+            switch house {
+            case .gryffindor: audio = .declareGryffindor
+            case .hufflepuff: audio = .declareHufflepuff
+            case .ravenclaw: audio = .declareRavenclaw
+            case .slytherin: audio = .declareSlytherin
+            }
 
-        // also go back to root
-        SHActionTree.shared.goUpToRootBranch()
+            print("House \(house.name)!")
+
+            // also go back to root
+            SHActionTree.shared.goUpToRootBranch()
+
+            let disposable = SerialAudioPlayer.shared
+                .enqueue(audioUnits: [
+                    .audio(.predeclareLetsGoWith),
+                    .pause(0.2),
+                    .audio(audio)
+                ])
+                .subscribe(onCompleted: {
+                    completable(.completed)
+                })
+
+            return disposable
+        }
+    }
+}
+
+/// Check if wearer wants the given house
+struct AskHouseAction: Action {
+    let house: House
+
+    func execute() -> Completable {
+        print("Do you want to be a \(house.name)?")
+        return Completable.empty()
     }
 }
 
 struct GoToBranchAction: Action {
     let branch: ActionBranchNode
 
-    func execute() {
+    func execute() -> Completable {
         SHActionTree.shared.goToBranch(branch)
+        // complete immediately
+        return Completable.empty()
     }
 }

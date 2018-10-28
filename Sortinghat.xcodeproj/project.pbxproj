@@ -21,6 +21,9 @@
 		E9427902218532010029F9AE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427901218532010029F9AE /* ViewModel.swift */; };
 		E9427905218535BD0029F9AE /* ObservableType+FilterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427904218535BD0029F9AE /* ObservableType+FilterNil.swift */; };
 		E9427909218538F90029F9AE /* SHActionTreeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427908218538F90029F9AE /* SHActionTreeSetup.swift */; };
+		E942790B21856DFA0029F9AE /* SHAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942790A21856DFA0029F9AE /* SHAudio.swift */; };
+		E942790E21857D130029F9AE /* SerialAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942790D21857D130029F9AE /* SerialAudioPlayer.swift */; };
+		E942791021857F360029F9AE /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942790F21857F360029F9AE /* SpeechSynthesizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		E9427901218532010029F9AE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E9427904218535BD0029F9AE /* ObservableType+FilterNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+FilterNil.swift"; sourceTree = "<group>"; };
 		E9427908218538F90029F9AE /* SHActionTreeSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHActionTreeSetup.swift; sourceTree = "<group>"; };
+		E942790A21856DFA0029F9AE /* SHAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHAudio.swift; sourceTree = "<group>"; };
+		E942790D21857D130029F9AE /* SerialAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialAudioPlayer.swift; sourceTree = "<group>"; };
+		E942790F21857F360029F9AE /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,7 @@
 				E94278FE218529FE0029F9AE /* SHActions.swift */,
 				E94278FC2185297A0029F9AE /* SHActionTree.swift */,
 				E9427908218538F90029F9AE /* SHActionTreeSetup.swift */,
+				E942790A21856DFA0029F9AE /* SHAudio.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E94279072185381A0029F9AE /* Actions */,
+				E942790C21857D020029F9AE /* Audio */,
 				E9427903218535A90029F9AE /* Rx */,
 				E9427901218532010029F9AE /* ViewModel.swift */,
 			);
@@ -158,6 +166,15 @@
 				E94278FA2185294E0029F9AE /* Action.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		E942790C21857D020029F9AE /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E942790D21857D130029F9AE /* SerialAudioPlayer.swift */,
+				E942790F21857F360029F9AE /* SpeechSynthesizer.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +301,7 @@
 			files = (
 				E9427909218538F90029F9AE /* SHActionTreeSetup.swift in Sources */,
 				E9348EA02184F791008FCFE4 /* SwipeMenuViewController.swift in Sources */,
+				E942791021857F360029F9AE /* SpeechSynthesizer.swift in Sources */,
 				E94278FD2185297A0029F9AE /* SHActionTree.swift in Sources */,
 				E94278F6218522E50029F9AE /* SwipeMenuViewModel.swift in Sources */,
 				E9348E9E2184F791008FCFE4 /* AppDelegate.swift in Sources */,
@@ -291,7 +309,9 @@
 				E94278FB2185294E0029F9AE /* Action.swift in Sources */,
 				E94278FF218529FE0029F9AE /* SHActions.swift in Sources */,
 				E9427902218532010029F9AE /* ViewModel.swift in Sources */,
+				E942790B21856DFA0029F9AE /* SHAudio.swift in Sources */,
 				E94278F92185276B0029F9AE /* ActionNode.swift in Sources */,
+				E942790E21857D130029F9AE /* SerialAudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,16 +47,19 @@ class SwipeMenuViewModel: ViewModel {
             .filterNil()
 
         childBranchSelectedObservable
-            .subscribe(onNext: { selectedChild in
+            .flatMap { selectedChild -> Completable in
                 switch selectedChild {
                 case .leaf(let leafNode):
-                    leafNode.action.execute()
+                    return leafNode.action.execute()
                 case .branch(let branchNode):
                     // when user selects a branch node, the action
                     // is to go into that branch
                     let action = GoToBranchAction(branch: branchNode)
-                    action.execute()
+                    return action.execute()
                 }
+            }
+            .subscribe(onCompleted: {
+                // do nothing
             })
             .disposed(by: disposeBag)
     }
