@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="193.5" width="375" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Central Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-cL-Z7E">
-                                        <rect key="frame" x="133" y="139" width="109" height="21"/>
+                                        <rect key="frame" x="116" y="125" width="109" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -68,12 +68,20 @@
                                     <constraint firstAttribute="trailing" secondItem="npN-ts-8rC" secondAttribute="trailing" constant="15" id="uiy-je-5RZ"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08G-Ux-rOK" userLabel="Title Label">
+                                <rect key="frame" x="163" y="28" width="49" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7fQ-GK-1L7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7ZH-er-Ra4"/>
+                            <constraint firstItem="08G-Ux-rOK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="AVy-8K-DPv"/>
                             <constraint firstItem="7fQ-GK-1L7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="999" id="An4-UV-GNb"/>
+                            <constraint firstItem="08G-Ux-rOK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l8h-bN-LMp"/>
                             <constraint firstItem="7fQ-GK-1L7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tYh-is-oqh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,6 +98,7 @@
                         <outlet property="centralActionLabel" destination="Mll-cL-Z7E" id="S3G-2z-c12"/>
                         <outlet property="leftActionLabel" destination="H0S-YG-s6h" id="eBY-oM-66e"/>
                         <outlet property="rightActionLabel" destination="npN-ts-8rC" id="nN4-8m-Vxc"/>
+                        <outlet property="titleLabel" destination="08G-Ux-rOK" id="2Mv-8t-Ngo"/>
                         <outlet property="topActionLabel" destination="1ph-Bl-DrM" id="m8b-JS-BE9"/>
                     </connections>
                 </viewController>

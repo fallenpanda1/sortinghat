@@ -8,6 +8,7 @@ class SwipeMenuViewController: UIViewController {
     // must be set before VC usage
     var viewModel: SwipeMenuViewModel!
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var centralActionLabel: UILabel!
     @IBOutlet weak var topActionLabel: UILabel!
     @IBOutlet weak var leftActionLabel: UILabel!
@@ -32,6 +33,10 @@ class SwipeMenuViewController: UIViewController {
 
     private func setUpBindings() {
         let outputs = viewModel.outputBindings()
+
+        outputs.title
+            .bind(to: titleLabel.rx.text)
+            .disposed(by: disposeBag)
 
         outputs.centerNodeTitle
             .bind(to: centralActionLabel.rx.text)
