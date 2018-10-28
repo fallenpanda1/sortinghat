@@ -22,7 +22,7 @@ struct SHActionTreeSetup {
     private static func declareHouseLeaf(house: House) -> ActionNode {
         return ActionNode.leaf(
             ActionLeafNode(
-                name: house.rawValue.capitalized,
+                name: house.name,
                 action: DeclareHouseAction(house: house)
             )
         )

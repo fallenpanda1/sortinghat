@@ -3,13 +3,18 @@ enum House: String {
     case hufflepuff
     case slytherin
     case ravenclaw
+
+    var name: String {
+        return self.rawValue.capitalized
+    }
 }
 
+/// Declare wearer to a house
 struct DeclareHouseAction: Action {
     let house: House
 
     func execute() {
-        print("Declared house '\(house.rawValue.capitalized)'!")
+        print("House \(house.name)!")
     }
 }
 
