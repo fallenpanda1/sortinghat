@@ -9,9 +9,15 @@ class SHActionTree {
     var currentBranchObservable: Observable<ActionBranchNode> {
         return currentBranchRelay.asObservable()
     }
+    private let rootBranch: ActionBranchNode
 
     init() {
-        currentBranchRelay = BehaviorRelay(value: SHActionTreeSetup.root)
+        rootBranch = SHActionTreeSetup.root
+        currentBranchRelay = BehaviorRelay(value: rootBranch)
+    }
+
+    func goUpToRootBranch() {
+        currentBranchRelay.accept(rootBranch)
     }
 
     func goToBranch(_ branch: ActionBranchNode) {

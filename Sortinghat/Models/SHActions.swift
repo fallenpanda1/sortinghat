@@ -15,14 +15,16 @@ struct DeclareHouseAction: Action {
 
     func execute() {
         print("House \(house.name)!")
+
+        // also go back to root
+        SHActionTree.shared.goUpToRootBranch()
     }
 }
 
 struct GoToBranchAction: Action {
     let branch: ActionBranchNode
-    let actionTree = SHActionTree.shared
 
     func execute() {
-        actionTree.goToBranch(branch)
+        SHActionTree.shared.goToBranch(branch)
     }
 }
