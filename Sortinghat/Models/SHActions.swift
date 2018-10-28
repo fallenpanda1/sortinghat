@@ -49,3 +49,16 @@ struct GoToBranchAction: Action {
         return Completable.empty()
     }
 }
+
+/// Speak a random think action
+struct ThinkAction: Action {
+    func execute() -> Completable {
+        // also go back to root
+        SHActionTree.shared.goUpToRootBranch()
+
+        return SerialAudioPlayer.shared
+            .enqueue(audioUnits: [
+                .audio(SHAudio.randomThink())
+            ])
+    }
+}
