@@ -1,6 +1,9 @@
+import RxCocoa
+import RxSwift
 import UIKit
 
 class SwipeMenuViewController: UIViewController {
+    private let disposeBag = DisposeBag()
 
     // must be set before VC usage
     var viewModel: SwipeMenuViewModel!
@@ -12,7 +15,8 @@ class SwipeMenuViewController: UIViewController {
     @IBOutlet weak var rightActionLabel: UILabel!
 
     required init?(coder aDecoder: NSCoder) {
-        viewModel = SwipeMenuViewModel() // this needs to somehow gain access to the action graph
+        // TODO: kind of hacky...
+        viewModel = SwipeMenuViewModel(actionTree: SHActionTree.shared)
 
         super.init(coder: aDecoder)
     }
@@ -25,7 +29,29 @@ class SwipeMenuViewController: UIViewController {
     }
 
     private func setUpBindings() {
-        // TODO: implement me
+        let outputs = viewModel.outputBindings()
+
+        outputs.centerActionTitle
+            .bind(to: centralActionLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        outputs.topActionTitle
+            .bind(to: topActionLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        outputs.leftActionTitle
+            .bind(to: leftActionLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        outputs.bottomActionTitle
+            .bind(to: bottomActionLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        outputs.rightActionTitle
+            .bind(to: rightActionLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        viewModel.bind(inputs: SwipeMenuViewModel.Input())
     }
 
     @IBAction func didSwipeUp(_ sender: Any) {

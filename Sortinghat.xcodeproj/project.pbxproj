@@ -14,6 +14,13 @@
 		E9348EA52184F794008FCFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9348EA42184F794008FCFE4 /* Assets.xcassets */; };
 		E9348EA82184F794008FCFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9348EA62184F794008FCFE4 /* LaunchScreen.storyboard */; };
 		E94278F6218522E50029F9AE /* SwipeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94278F5218522E50029F9AE /* SwipeMenuViewModel.swift */; };
+		E94278F92185276B0029F9AE /* ActionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94278F82185276B0029F9AE /* ActionNode.swift */; };
+		E94278FB2185294E0029F9AE /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94278FA2185294E0029F9AE /* Action.swift */; };
+		E94278FD2185297A0029F9AE /* SHActionTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94278FC2185297A0029F9AE /* SHActionTree.swift */; };
+		E94278FF218529FE0029F9AE /* SHActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94278FE218529FE0029F9AE /* SHActions.swift */; };
+		E9427902218532010029F9AE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427901218532010029F9AE /* ViewModel.swift */; };
+		E9427905218535BD0029F9AE /* ObservableType+FilterNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427904218535BD0029F9AE /* ObservableType+FilterNil.swift */; };
+		E9427909218538F90029F9AE /* SHActionTreeSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427908218538F90029F9AE /* SHActionTreeSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		E9348EA72184F794008FCFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9348EA92184F794008FCFE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94278F5218522E50029F9AE /* SwipeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeMenuViewModel.swift; sourceTree = "<group>"; };
+		E94278F82185276B0029F9AE /* ActionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionNode.swift; sourceTree = "<group>"; };
+		E94278FA2185294E0029F9AE /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		E94278FC2185297A0029F9AE /* SHActionTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHActionTree.swift; sourceTree = "<group>"; };
+		E94278FE218529FE0029F9AE /* SHActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHActions.swift; sourceTree = "<group>"; };
+		E9427901218532010029F9AE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E9427904218535BD0029F9AE /* ObservableType+FilterNil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+FilterNil.swift"; sourceTree = "<group>"; };
+		E9427908218538F90029F9AE /* SHActionTreeSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHActionTreeSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +94,8 @@
 		E9348E9C2184F791008FCFE4 /* Sortinghat */ = {
 			isa = PBXGroup;
 			children = (
+				E9427900218531F70029F9AE /* Library */,
+				E94278F7218527510029F9AE /* Models */,
 				E94278F3218522C30029F9AE /* Views */,
 				E9348E9D2184F791008FCFE4 /* AppDelegate.swift */,
 				E9348EA12184F791008FCFE4 /* Main.storyboard */,
@@ -105,6 +121,43 @@
 				E94278F5218522E50029F9AE /* SwipeMenuViewModel.swift */,
 			);
 			path = Swipe;
+			sourceTree = "<group>";
+		};
+		E94278F7218527510029F9AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E94278FE218529FE0029F9AE /* SHActions.swift */,
+				E94278FC2185297A0029F9AE /* SHActionTree.swift */,
+				E9427908218538F90029F9AE /* SHActionTreeSetup.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9427900218531F70029F9AE /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E94279072185381A0029F9AE /* Actions */,
+				E9427903218535A90029F9AE /* Rx */,
+				E9427901218532010029F9AE /* ViewModel.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E9427903218535A90029F9AE /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				E9427904218535BD0029F9AE /* ObservableType+FilterNil.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		E94279072185381A0029F9AE /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				E94278F82185276B0029F9AE /* ActionNode.swift */,
+				E94278FA2185294E0029F9AE /* Action.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9427909218538F90029F9AE /* SHActionTreeSetup.swift in Sources */,
 				E9348EA02184F791008FCFE4 /* SwipeMenuViewController.swift in Sources */,
+				E94278FD2185297A0029F9AE /* SHActionTree.swift in Sources */,
 				E94278F6218522E50029F9AE /* SwipeMenuViewModel.swift in Sources */,
 				E9348E9E2184F791008FCFE4 /* AppDelegate.swift in Sources */,
+				E9427905218535BD0029F9AE /* ObservableType+FilterNil.swift in Sources */,
+				E94278FB2185294E0029F9AE /* Action.swift in Sources */,
+				E94278FF218529FE0029F9AE /* SHActions.swift in Sources */,
+				E9427902218532010029F9AE /* ViewModel.swift in Sources */,
+				E94278F92185276B0029F9AE /* ActionNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
