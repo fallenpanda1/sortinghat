@@ -1,13 +1,12 @@
 import RxSwift
 
-enum House: String {
-    case gryffindor
-    case hufflepuff
-    case slytherin
-    case ravenclaw
+/// Check if wearer wants the given house
+struct AskHouseAction: Action {
+    let house: House
 
-    var name: String {
-        return self.rawValue.capitalized
+    func execute() -> Completable {
+        print("Do you want to be a \(house.name)?")
+        return Completable.empty()
     }
 }
 
@@ -17,14 +16,9 @@ struct DeclareHouseAction: Action {
 
     func execute() -> Completable {
         let house = self.house
+
         return Completable.create { completable in
-            let audio: SHAudio
-            switch house {
-            case .gryffindor: audio = .declareGryffindor
-            case .hufflepuff: audio = .declareHufflepuff
-            case .ravenclaw: audio = .declareRavenclaw
-            case .slytherin: audio = .declareSlytherin
-            }
+            let audio = SHAudio.declareHouse(house)
 
             print("House \(house.name)!")
 
@@ -33,8 +27,7 @@ struct DeclareHouseAction: Action {
 
             let disposable = SerialAudioPlayer.shared
                 .enqueue(audioUnits: [
-                    .audio(.predeclareLetsGoWith),
-                    .pause(0.2),
+                    .audio(SHAudio.randomPredeclare()),
                     .audio(audio)
                 ])
                 .subscribe(onCompleted: {
@@ -46,16 +39,7 @@ struct DeclareHouseAction: Action {
     }
 }
 
-/// Check if wearer wants the given house
-struct AskHouseAction: Action {
-    let house: House
-
-    func execute() -> Completable {
-        print("Do you want to be a \(house.name)?")
-        return Completable.empty()
-    }
-}
-
+/// Navigate to a specific branch
 struct GoToBranchAction: Action {
     let branch: ActionBranchNode
 

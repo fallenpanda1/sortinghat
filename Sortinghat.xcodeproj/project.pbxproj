@@ -24,6 +24,7 @@
 		E942790B21856DFA0029F9AE /* SHAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942790A21856DFA0029F9AE /* SHAudio.swift */; };
 		E942790E21857D130029F9AE /* SerialAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942790D21857D130029F9AE /* SerialAudioPlayer.swift */; };
 		E942791021857F360029F9AE /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E942790F21857F360029F9AE /* SpeechSynthesizer.swift */; };
+		E9427917218612340029F9AE /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9427916218612340029F9AE /* House.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E942790A21856DFA0029F9AE /* SHAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHAudio.swift; sourceTree = "<group>"; };
 		E942790D21857D130029F9AE /* SerialAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialAudioPlayer.swift; sourceTree = "<group>"; };
 		E942790F21857F360029F9AE /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
+		E9427916218612340029F9AE /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		E94278F7218527510029F9AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9427916218612340029F9AE /* House.swift */,
 				E94278FE218529FE0029F9AE /* SHActions.swift */,
 				E94278FC2185297A0029F9AE /* SHActionTree.swift */,
 				E9427908218538F90029F9AE /* SHActionTreeSetup.swift */,
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9427917218612340029F9AE /* House.swift in Sources */,
 				E9427909218538F90029F9AE /* SHActionTreeSetup.swift in Sources */,
 				E9348EA02184F791008FCFE4 /* SwipeMenuViewController.swift in Sources */,
 				E942791021857F360029F9AE /* SpeechSynthesizer.swift in Sources */,
