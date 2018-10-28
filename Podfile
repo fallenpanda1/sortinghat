@@ -10,4 +10,5 @@ target 'Sortinghat' do
   # Pods for 'Sortinghat'
   pod 'RxSwift',  '~> 4.0'
   pod 'RxCocoa',  '~> 4.0'
+  pod 'RxAnimated'
 end

@@ -1,21 +1,31 @@
 PODS:
+  - RxAnimated (0.5.0):
+    - RxAnimated/Core (= 0.5.0)
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
+  - RxAnimated/Core (0.5.0):
+    - RxCocoa (~> 4.3)
+    - RxSwift (~> 4.3)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
 
 DEPENDENCIES:
+  - RxAnimated
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - RxAnimated
     - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
+  RxAnimated: 57a731e59557219480fb3dd86d965d977d863fc6
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
-PODFILE CHECKSUM: f2aaa53f3729bf1edcd670fc3f756a797f7126d4
+PODFILE CHECKSUM: b4aa3fde99d05dbb68a1daed328bd724d6d98f12
 
 COCOAPODS: 1.5.3
