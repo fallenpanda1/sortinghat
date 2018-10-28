@@ -4,10 +4,10 @@ struct SHActionTreeSetup {
     static let root: ActionBranchNode = {
         let declareHouseMenu = ActionBranchNode(
             name: "Declare House",
-            topAction: declareHouseLeaf(house: .gryffindor),
-            leftAction: declareHouseLeaf(house: .hufflepuff),
-            bottomAction: declareHouseLeaf(house: .slytherin),
-            rightAction: declareHouseLeaf(house: .ravenclaw)
+            topNode: declareHouseLeaf(house: .gryffindor),
+            leftNode: declareHouseLeaf(house: .hufflepuff),
+            bottomNode: declareHouseLeaf(house: .slytherin),
+            rightNode: declareHouseLeaf(house: .ravenclaw)
         )
 
         // TODO: add a super menu whose 'tap' action takes us to 'declare house'

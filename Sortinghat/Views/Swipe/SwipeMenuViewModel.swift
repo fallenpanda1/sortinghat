@@ -11,11 +11,11 @@ class SwipeMenuViewModel: ViewModel {
 
     struct Output {
         let title: Observable<String>
-        let centerActionTitle: Observable<String?>
-        let topActionTitle: Observable<String?>
-        let leftActionTitle: Observable<String?>
-        let bottomActionTitle: Observable<String?>
-        let rightActionTitle: Observable<String?>
+        let centerNodeTitle: Observable<String?>
+        let topNodeTitle: Observable<String?>
+        let leftNodeTitle: Observable<String?>
+        let bottomNodeTitle: Observable<String?>
+        let rightNodeTitle: Observable<String?>
     }
 
     private let actionTree: SHActionTree
@@ -30,11 +30,11 @@ class SwipeMenuViewModel: ViewModel {
     func outputBindings() -> SwipeMenuViewModel.Output {
         return Output(
             title: currentBranchObservable.map { $0.name },
-            centerActionTitle: currentBranchObservable.map { $0.centerAction?.name },
-            topActionTitle: currentBranchObservable.map { $0.topAction?.name },
-            leftActionTitle: currentBranchObservable.map { $0.leftAction?.name },
-            bottomActionTitle: currentBranchObservable.map { $0.bottomAction?.name },
-            rightActionTitle: currentBranchObservable.map { $0.rightAction?.name }
+            centerNodeTitle: currentBranchObservable.map { $0.centerNode?.name },
+            topNodeTitle: currentBranchObservable.map { $0.topNode?.name },
+            leftNodeTitle: currentBranchObservable.map { $0.leftNode?.name },
+            bottomNodeTitle: currentBranchObservable.map { $0.bottomNode?.name },
+            rightNodeTitle: currentBranchObservable.map { $0.rightNode?.name }
         )
     }
 

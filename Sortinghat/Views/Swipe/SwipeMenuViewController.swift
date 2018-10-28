@@ -33,23 +33,23 @@ class SwipeMenuViewController: UIViewController {
     private func setUpBindings() {
         let outputs = viewModel.outputBindings()
 
-        outputs.centerActionTitle
+        outputs.centerNodeTitle
             .bind(to: centralActionLabel.rx.text)
             .disposed(by: disposeBag)
 
-        outputs.topActionTitle
+        outputs.topNodeTitle
             .bind(to: topActionLabel.rx.text)
             .disposed(by: disposeBag)
 
-        outputs.leftActionTitle
+        outputs.leftNodeTitle
             .bind(to: leftActionLabel.rx.text)
             .disposed(by: disposeBag)
 
-        outputs.bottomActionTitle
+        outputs.bottomNodeTitle
             .bind(to: bottomActionLabel.rx.text)
             .disposed(by: disposeBag)
 
-        outputs.rightActionTitle
+        outputs.rightNodeTitle
             .bind(to: rightActionLabel.rx.text)
             .disposed(by: disposeBag)
 

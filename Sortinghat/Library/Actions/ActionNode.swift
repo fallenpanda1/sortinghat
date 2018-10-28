@@ -25,38 +25,38 @@ enum ActionBranchChildPosition {
 /// A node that has subnodes
 class ActionBranchNode {
     let name: String
-    let centerAction: ActionNode?
-    let topAction: ActionNode?
-    let leftAction: ActionNode?
-    let bottomAction: ActionNode?
-    let rightAction: ActionNode?
+    let centerNode: ActionNode?
+    let topNode: ActionNode?
+    let leftNode: ActionNode?
+    let bottomNode: ActionNode?
+    let rightNode: ActionNode?
 
     init(name: String,
-         centerAction: ActionNode? = nil,
-         topAction: ActionNode? = nil,
-         leftAction: ActionNode? = nil,
-         bottomAction: ActionNode? = nil,
-         rightAction: ActionNode? = nil) {
+         centerNode: ActionNode? = nil,
+         topNode: ActionNode? = nil,
+         leftNode: ActionNode? = nil,
+         bottomNode: ActionNode? = nil,
+         rightNode: ActionNode? = nil) {
         self.name = name
-        self.centerAction = centerAction
-        self.topAction = topAction
-        self.leftAction = leftAction
-        self.bottomAction = bottomAction
-        self.rightAction = rightAction
+        self.centerNode = centerNode
+        self.topNode = topNode
+        self.leftNode = leftNode
+        self.bottomNode = bottomNode
+        self.rightNode = rightNode
     }
 
     func childNode(forPosition position: ActionBranchChildPosition) -> ActionNode? {
         switch position {
         case .center:
-            return centerAction
+            return centerNode
         case .top:
-            return topAction
+            return topNode
         case .left:
-            return leftAction
+            return leftNode
         case .bottom:
-            return bottomAction
+            return bottomNode
         case .right:
-            return rightAction
+            return rightNode
         }
     }
 }
