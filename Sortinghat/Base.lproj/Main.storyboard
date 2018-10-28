@@ -20,9 +20,8 @@
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-GK-1L7" userLabel="Action Circle">
                                 <rect key="frame" x="0.0" y="193.5" width="375" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Central Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-cL-Z7E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Central Action" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-cL-Z7E">
                                         <rect key="frame" x="133" y="139" width="109" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -55,6 +54,7 @@
                                 <constraints>
                                     <constraint firstItem="H0S-YG-s6h" firstAttribute="leading" secondItem="7fQ-GK-1L7" secondAttribute="leading" constant="15" id="Dd2-BH-vA3"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="EcO-Ac-9PA"/>
+                                    <constraint firstItem="Mll-cL-Z7E" firstAttribute="centerX" secondItem="7fQ-GK-1L7" secondAttribute="centerX" id="PYL-U6-3JT"/>
                                     <constraint firstItem="9ET-oC-3sk" firstAttribute="centerX" secondItem="7fQ-GK-1L7" secondAttribute="centerX" id="SM2-Nh-0SA"/>
                                     <constraint firstItem="1ph-Bl-DrM" firstAttribute="centerX" secondItem="7fQ-GK-1L7" secondAttribute="centerX" id="XCq-2G-LGM"/>
                                     <constraint firstItem="1ph-Bl-DrM" firstAttribute="top" secondItem="7fQ-GK-1L7" secondAttribute="top" constant="6" id="Z6q-Xp-KZY"/>
@@ -62,6 +62,9 @@
                                     <constraint firstItem="H0S-YG-s6h" firstAttribute="centerY" secondItem="7fQ-GK-1L7" secondAttribute="centerY" id="cyg-oB-Wdk"/>
                                     <constraint firstItem="npN-ts-8rC" firstAttribute="centerY" secondItem="7fQ-GK-1L7" secondAttribute="centerY" id="iRt-Es-sR0"/>
                                     <constraint firstAttribute="width" secondItem="7fQ-GK-1L7" secondAttribute="height" multiplier="1:0.8" id="l67-Hn-zeo"/>
+                                    <constraint firstItem="Mll-cL-Z7E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H0S-YG-s6h" secondAttribute="trailing" priority="999" constant="15" id="nzg-xg-6Rd"/>
+                                    <constraint firstItem="Mll-cL-Z7E" firstAttribute="centerY" secondItem="7fQ-GK-1L7" secondAttribute="centerY" id="qSd-oo-6eC"/>
+                                    <constraint firstItem="npN-ts-8rC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mll-cL-Z7E" secondAttribute="trailing" priority="999" constant="15" id="tKZ-kn-MLR"/>
                                     <constraint firstAttribute="trailing" secondItem="npN-ts-8rC" secondAttribute="trailing" constant="15" id="uiy-je-5RZ"/>
                                 </constraints>
                             </view>
