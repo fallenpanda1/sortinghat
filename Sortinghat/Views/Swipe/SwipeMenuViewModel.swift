@@ -39,9 +39,9 @@ class SwipeMenuViewModel: ViewModel {
     }
 
     func bind(inputs: SwipeMenuViewModel.Input) {
-        let childBranchSelectedObservable: Observable<ActionNode> = Observable
-            .combineLatest(currentBranchObservable, inputs.childPositionSelected)
-            .map { currentBranch, childPositionSelected in
+        let childBranchSelectedObservable: Observable<ActionNode> = inputs.childPositionSelected
+            .withLatestFrom(currentBranchObservable) { return ($0, $1) }
+            .map { (childPositionSelected, currentBranch) in
                 return currentBranch.childNode(forPosition: childPositionSelected)
             }
             .filterNil()

@@ -10,8 +10,13 @@ struct SHActionTreeSetup {
             rightNode: declareHouseLeaf(house: .ravenclaw)
         )
 
+        let mainMenu = ActionBranchNode(
+            name: "The Sorting Hat",
+            centerNode: ActionNode.branch(declareHouseMenu)
+        )
+
         // TODO: add a super menu whose 'tap' action takes us to 'declare house'
-        return declareHouseMenu
+        return mainMenu
     }()
 
     private static func declareHouseLeaf(house: House) -> ActionNode {
