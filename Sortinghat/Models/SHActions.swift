@@ -17,25 +17,16 @@ struct DeclareHouseAction: Action {
     func execute() -> Completable {
         let house = self.house
 
-        return Completable.create { completable in
-            let audio = SHAudio.declareHouse(house)
+        let audio = SHAudio.declareHouse(house)
 
-            print("House \(house.name)!")
+        // also go back to root
+        SHActionTree.shared.goUpToRootBranch()
 
-            // also go back to root
-            SHActionTree.shared.goUpToRootBranch()
-
-            let disposable = SerialAudioPlayer.shared
-                .enqueue(audioUnits: [
-                    .audio(SHAudio.randomPredeclare()),
-                    .audio(audio)
-                ])
-                .subscribe(onCompleted: {
-                    completable(.completed)
-                })
-
-            return disposable
-        }
+        return SerialAudioPlayer.shared
+            .enqueue(audioUnits: [
+                .audio(SHAudio.randomPredeclare()),
+                .audio(audio)
+            ])
     }
 }
 
