@@ -13,4 +13,8 @@ class SHActionTree {
     init() {
         currentBranchRelay = BehaviorRelay(value: SHActionTreeSetup.root)
     }
+
+    func goToBranch(_ branch: ActionBranchNode) {
+        currentBranchRelay.accept(branch)
+    }
 }

@@ -18,7 +18,7 @@ struct SHActionTreeSetup {
         return ActionNode.leaf(
             ActionLeafNode(
                 name: house.rawValue.capitalized,
-                action: SHDeclareHouseAction(house: house)
+                action: DeclareHouseAction(house: house)
             )
         )
     }

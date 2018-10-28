@@ -2,7 +2,11 @@ import RxSwift
 import RxCocoa
 
 class SwipeMenuViewModel: ViewModel {
+    private let disposeBag = DisposeBag()
+
     struct Input {
+        // captures user selection of any of the branch children via swipes/taps
+        let childPositionSelected: Observable<ActionBranchChildPosition>
     }
 
     struct Output {
@@ -35,11 +39,25 @@ class SwipeMenuViewModel: ViewModel {
     }
 
     func bind(inputs: SwipeMenuViewModel.Input) {
-        return
-    }
+        let childBranchSelectedObservable: Observable<ActionNode> = Observable
+            .combineLatest(currentBranchObservable, inputs.childPositionSelected)
+            .map { currentBranch, childPositionSelected in
+                return currentBranch.childNode(forPosition: childPositionSelected)
+            }
+            .filterNil()
 
-    /// set the current branch
-    func setActionBranch(_ actionBranch: ActionBranchNode) {
-        // TODO: tell SHActionTree to update its branch node
+        childBranchSelectedObservable
+            .subscribe(onNext: { selectedChild in
+                switch selectedChild {
+                case .leaf(let leafNode):
+                    leafNode.action.execute()
+                case .branch(let branchNode):
+                    // when user selects a branch node, the action
+                    // is to go into that branch
+                    let action = GoToBranchAction(branch: branchNode)
+                    action.execute()
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

@@ -5,10 +5,19 @@ enum House: String {
     case ravenclaw
 }
 
-struct SHDeclareHouseAction: Action {
+struct DeclareHouseAction: Action {
     let house: House
 
     func execute() {
-        print("Declared house '\(house)'!")
+        print("Declared house '\(house.rawValue.capitalized)'!")
+    }
+}
+
+struct GoToBranchAction: Action {
+    let branch: ActionBranchNode
+    let actionTree = SHActionTree.shared
+
+    func execute() {
+        actionTree.goToBranch(branch)
     }
 }

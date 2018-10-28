@@ -13,6 +13,15 @@ enum ActionNode {
     }
 }
 
+/// Lists out all possible branch children for our purposes
+enum ActionBranchChildPosition {
+    case center
+    case top
+    case left
+    case bottom
+    case right
+}
+
 /// A node that has subnodes
 class ActionBranchNode {
     let name: String
@@ -36,9 +45,19 @@ class ActionBranchNode {
         self.rightAction = rightAction
     }
 
-    /// Convenience empty branch
-    static func empty() -> ActionBranchNode {
-        return ActionBranchNode(name: "")
+    func childNode(forPosition position: ActionBranchChildPosition) -> ActionNode? {
+        switch position {
+        case .center:
+            return centerAction
+        case .top:
+            return topAction
+        case .left:
+            return leftAction
+        case .bottom:
+            return bottomAction
+        case .right:
+            return rightAction
+        }
     }
 }
 

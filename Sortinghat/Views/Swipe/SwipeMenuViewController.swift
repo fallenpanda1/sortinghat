@@ -14,6 +14,8 @@ class SwipeMenuViewController: UIViewController {
     @IBOutlet weak var bottomActionLabel: UILabel!
     @IBOutlet weak var rightActionLabel: UILabel!
 
+    private let childPositionSelected = PublishRelay<ActionBranchChildPosition>()
+
     required init?(coder aDecoder: NSCoder) {
         // TODO: kind of hacky...
         viewModel = SwipeMenuViewModel(actionTree: SHActionTree.shared)
@@ -51,26 +53,28 @@ class SwipeMenuViewController: UIViewController {
             .bind(to: rightActionLabel.rx.text)
             .disposed(by: disposeBag)
 
-        viewModel.bind(inputs: SwipeMenuViewModel.Input())
+        viewModel.bind(inputs: SwipeMenuViewModel.Input(
+            childPositionSelected: childPositionSelected.asObservable()
+        ))
     }
 
     @IBAction func didSwipeUp(_ sender: Any) {
-        print("up")
+        childPositionSelected.accept(.top)
     }
 
     @IBAction func didSwipeLeft(_ sender: Any) {
-        print("left")
+        childPositionSelected.accept(.left)
     }
 
     @IBAction func didSwipeDown(_ sender: Any) {
-        print("down")
+        childPositionSelected.accept(.bottom)
     }
 
     @IBAction func didSwipeRight(_ sender: Any) {
-        print("right")
+        childPositionSelected.accept(.right)
     }
 
     @IBAction func didTap(_ sender: Any) {
-        print("tap")
+        childPositionSelected.accept(.center)
     }
 }
