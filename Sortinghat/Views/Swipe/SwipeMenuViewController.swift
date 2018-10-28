@@ -1,3 +1,4 @@
+import RxAnimated
 import RxCocoa
 import RxSwift
 import UIKit
@@ -35,27 +36,32 @@ class SwipeMenuViewController: UIViewController {
         let outputs = viewModel.outputBindings()
 
         outputs.title
-            .bind(to: titleLabel.rx.text)
+            .bind(animated: titleLabel.rx.animated.fade(duration: 0.1).text)
             .disposed(by: disposeBag)
 
         outputs.centerNodeTitle
-            .bind(to: centralActionLabel.rx.text)
+            .map { $0 ?? "" }
+            .bind(animated: centralActionLabel.rx.animated.fade(duration: 0.1).text)
             .disposed(by: disposeBag)
 
         outputs.topNodeTitle
-            .bind(to: topActionLabel.rx.text)
+            .map { $0 ?? "" }
+            .bind(animated: topActionLabel.rx.animated.fade(duration: 0.1).text)
             .disposed(by: disposeBag)
 
         outputs.leftNodeTitle
-            .bind(to: leftActionLabel.rx.text)
+            .map { $0 ?? "" }
+            .bind(animated: leftActionLabel.rx.animated.fade(duration: 0.1).text)
             .disposed(by: disposeBag)
 
         outputs.bottomNodeTitle
-            .bind(to: bottomActionLabel.rx.text)
+            .map { $0 ?? "" }
+            .bind(animated: bottomActionLabel.rx.animated.fade(duration: 0.1).text)
             .disposed(by: disposeBag)
 
         outputs.rightNodeTitle
-            .bind(to: rightActionLabel.rx.text)
+            .map { $0 ?? "" }
+            .bind(animated: rightActionLabel.rx.animated.fade(duration: 0.1).text)
             .disposed(by: disposeBag)
 
         viewModel.bind(inputs: SwipeMenuViewModel.Input(
